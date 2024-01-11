@@ -126,7 +126,8 @@ body {
     background-color: #b4b4b4;
     color:#333333;             
     border-radius: 25px;       
-    transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    padding: 5px 25px 5px 25px
 }
 .hide:hover {
     background-color: #333333;

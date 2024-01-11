@@ -26,11 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
         displayCount.textContent = count;
     });
 
-    toggleButton.addEventListener('click', () => {
-        if (content3.classList.contains('collapsed')) {
-            content3.classList.remove('collapsed');
-        } else {
-            content3.classList.add('collapsed');
-        }
+    button3.addEventListener('click', () => {
+        content3.classList.toggle('collapsed');
+        toggleButton.textContent = content3.classList.contains('collapsed') ? 'Open' : 'Hide';
     });
 });
