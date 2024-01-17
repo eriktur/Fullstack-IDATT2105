@@ -25,16 +25,26 @@
 
     <div class="buttonEquals" @click="calculate">=</div>
     <div class="buttonClear" @click="clearInput">C</div>
+    
+
+    <div class="log">
+          <h3>Calculator log:</h3>
+          <ul>
+            <li v-for="(entry, index) in calculationLog" :key="index">{{ entry }}</li>
+          </ul>
+        </div>
   </div>
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      currentInput: ''
-    };
-  },
+ export default {
+   data() {
+     return {
+       currentInput: '',
+       calculationLog: [], // Logg for beregninger
+       // Andre dataelementer...
+     };
+   },
 
   mounted() {
     document.addEventListener("keydown", this.handleKeyPress);
@@ -43,6 +53,7 @@ export default {
     document.removeEventListener('keydown', this.handleKeyPress);
   },
   methods: {
+
     appendToInput(value) {
       this.currentInput += value;
     },
@@ -52,17 +63,22 @@ export default {
         this.currentInput = 'Can not divide by zero:(';
         return;
       }
-      try {
-        this.currentInput = eval(this.currentInput).toString();
-      } catch (e) {
-        this.currentInput = 'Error:(';
-      }
-    },
+ try {
+          let result = eval(this.currentInput).toString();
+          this.calculationLog.push(`${this.currentInput} = ${result}`);
+          this.currentInput = result;
+        } catch (e) {
+          this.currentInput = 'Error :(';
+        }
+      },
+
     clearInput() {
       this.currentInput = '';
     },
+
+
     handleKeyPress(e) {
-      // Sjekk hvilken tast som ble trykket og oppdater currentInput eller utfør handling
+
       if (e.key >= '0' && e.key <= '9') {
         this.appendToInput(e.key);
       } else if (e.key === '+' || e.key === '-' || e.key === '*' || e.key === '/') {
@@ -74,7 +90,6 @@ export default {
       } else if (e.key === 'Escape') {
         this.clearInput();
       }
-      // Legg til flere betingelser etter behov
     }
   }
 };
@@ -120,16 +135,15 @@ export default {
   color: #ffffff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   transition: background-color 0.2s;
-
 }
-.buttonNumber:hover {
+.buttonNumber:hover  {
   background-color: #6e6e6e;
   color:#ffffff;
 }
 .buttonOperation:hover {
   background-color: #6e6e6e;
   color:#ffffff;
-}                           
+}
 .buttonEquals {
   grid-column: span 2;
   background-color: #f0f0f0;
@@ -148,6 +162,8 @@ export default {
   color: #333;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   transition: background-color 0.2s;
-  
+}
+.log{
+  color: #ffffff;
 }
 </style>
