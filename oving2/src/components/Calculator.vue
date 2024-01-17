@@ -1,31 +1,32 @@
 <template>
   <div class="calculator">
-
     <div class="display">{{ currentInput || '0' }}</div>
 
     <div class="buttonNumber" @click="appendToInput(9)">9</div>
     <div class="buttonNumber" @click="appendToInput(8)">8</div>
+    <div class="buttonNumber" @click="appendToInput(7)">7</div>
     <div class="buttonOperation" @click="appendToInput('+')">+</div>
 
-    <div class="buttonNumber" @click="appendToInput(7)">7</div>
     <div class="buttonNumber" @click="appendToInput(6)">6</div>
-    <div class="buttonOperation" @click="appendToInput('-')">-</div>
-
     <div class="buttonNumber" @click="appendToInput(5)">5</div>
     <div class="buttonNumber" @click="appendToInput(4)">4</div>
-    <div class="buttonOperation" @click="appendToInput('*')">*</div>
+    <div class="buttonOperation" @click="appendToInput('-')">-</div>
 
     <div class="buttonNumber" @click="appendToInput(3)">3</div>
     <div class="buttonNumber" @click="appendToInput(2)">2</div>
-    <div class="buttonOperation" @click="appendToInput('/')">/</div>
-
     <div class="buttonNumber" @click="appendToInput(1)">1</div>
-    <div class="buttonNumber" @click="appendToInput(0)">0</div>
-    <div class="buttonOperation" @click="appendToInput('.')">.</div>
+    <div class="buttonOperation" @click="appendToInput('*')">*</div>
+
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <div class="buttonOperation" @click="appendToInput('/')">/</div>
+    <div class="buttonClear" @click="clearInput">C</div>
+
 
     <div class="buttonEquals" @click="calculate">=</div>
-    <div class="buttonClear" @click="clearInput">C</div>
-    
+    <div class="buttonOperation" @click="appendToInput('.')">.</div>
 
     <div class="log">
           <h3>Calculator log:</h3>
@@ -41,8 +42,7 @@
    data() {
      return {
        currentInput: '',
-       calculationLog: [], // Logg for beregninger
-       // Andre dataelementer...
+       calculationLog: [],
      };
    },
 
@@ -76,7 +76,6 @@
       this.currentInput = '';
     },
 
-
     handleKeyPress(e) {
 
       if (e.key >= '0' && e.key <= '9') {
@@ -98,7 +97,7 @@
 <style scoped>
 .calculator {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto repeat(4, 1fr);
   gap: 10px;
   max-width: 400px;
@@ -122,19 +121,20 @@
   background-color: #f0f0f0;
   border: none;
   border-radius: 10px;
-  font-size: 1.5em;
   color: #333;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   transition: background-color 0.2s;
+  font-size: 30px;
 }
+
 .buttonOperation {
   background-color: #939393;
   border: none;
   border-radius: 10px;
-  font-size: 1.5em;                               
   color: #ffffff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   transition: background-color 0.2s;
+  font-size: 30px;
 }
 .buttonNumber:hover  {
   background-color: #6e6e6e;
@@ -142,28 +142,47 @@
 }
 .buttonOperation:hover {
   background-color: #6e6e6e;
-  color:#ffffff;
 }
 .buttonEquals {
   grid-column: span 2;
   background-color: #f0f0f0;
   border: none;
   border-radius: 10px;
-  font-size: 1.5em;
+  font-size: 30px;
   color: #333;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   transition: background-color 0.2s;
 }
+.buttonEquals:hover  {
+  background-color: #6e6e6e;
+  color:#ffffff;
+}
+
 .buttonClear{
   background-color: #ff8628;
   border: none;
   border-radius: 10px;                                                 
-  font-size: 1.5em;
+  font-size: 30px;    
   color: #333;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   transition: background-color 0.2s;
 }
+.buttonClear:hover {
+  background-color: #e56d00;
+}
 .log{
   color: #ffffff;
+  grid-column:span 4;
 }
+.skibb{
+  grid-column: span 3;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.5em;
+  color: #333;
+  box-shadow: 0 4px 10px rgba(0, 0, 0,25);
+  transition: background-color 0.2s;
+}
+
 </style>
