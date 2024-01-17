@@ -3,15 +3,24 @@
 
     <div class="display">{{ currentInput || '0' }}</div>
 
-    <div class="numbButton" v-for="num in [1, 2, 3, 4, 5, 6, 7, 8, 9]" :key="`num-${num}`" @click="appendToInput(num)">
-      {{ num }}
-    </div>
-    <div class="ZeroButton" v-for="num in [0]" :key="num" @click="appendToInput(num)">
-          {{ num }}
-    </div>
-    <div class="opButton" v-for="op in ['+', '-', '*', '/']" :key="`op-${op}`" @click="appendToInput(op)">
-      {{ op }}
-    </div>
+    <div class="buttonNumber" @click="appendToInput(9)">9</div>
+    <div class="buttonNumber" @click="appendToInput(8)">8</div>
+    <div class="buttonOperation" @click="appendToInput('+')">+</div>
+
+    <div class="buttonNumber" @click="appendToInput(7)">7</div>
+    <div class="buttonNumber" @click="appendToInput(6)">6</div>
+    <div class="buttonOperation" @click="appendToInput('-')">-</div>
+
+    <div class="buttonNumber" @click="appendToInput(5)">5</div>
+    <div class="buttonNumber" @click="appendToInput(4)">4</div>
+    <div class="buttonOperation" @click="appendToInput('*')">*</div>
+
+    <div class="buttonNumber" @click="appendToInput(3)">3</div>
+    <div class="buttonNumber" @click="appendToInput(2)">2</div>
+    <div class="buttonOperation" @click="appendToInput('/')">/</div>
+
+    <div class="buttonNumber" @click="appendToInput(1)">1</div>
+    <div class="buttonNumber" @click="appendToInput(0)">0</div>
 
     <div class="buttonEquals" @click="calculate">=</div>
     <div class="buttonClear" @click="clearInput">C</div>
@@ -34,10 +43,7 @@ export default {
       try {
         this.currentInput = eval(this.currentInput).toString();
       } catch (e) {
-        this.currentInput = 'Error';
-        setTimeout(() => {
-          this.clearInput();
-        }, 1500);
+        this.currentInput = 'Error:(';
       }
     },
 
@@ -51,8 +57,8 @@ export default {
 <style scoped>
 .calculator {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 4 kolonner */
-  grid-template-rows: auto repeat(4, 1fr); /* 1 rad for display, 5 for knapper */
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto repeat(4, 1fr);
   gap: 10px;
   max-width: 400px;
   margin: auto;
@@ -62,51 +68,50 @@ export default {
 }
 
 .display {
-  grid-column: 1 / -1; /* Display strekker seg over alle 4 kolonner */
+  grid-column: 1 / -1;
   background-color: #818181;
   color: white;
   text-align: right;
   padding: 20px;
   border-radius: 20px;
   font-size: 2em;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
-
-.numbButton {
+.buttonNumber {
   background-color: #f0f0f0;
   border: none;
   border-radius: 10px;
   font-size: 1.5em;
   color: #333;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   transition: background-color 0.2s;
 }
-.opButton {
-  background-color: #f0f0f0;
+.buttonOperation {
+  background-color: #939393;
   border: none;
   border-radius: 10px;
   font-size: 1.5em;                               
-  color: #333;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   transition: background-color 0.2s;
 
 }
-.numbButton:hover {
+.buttonNumber:hover {
   background-color: #6e6e6e;
   color:#ffffff;
 }
-.opButton:hover {
+.buttonOperation:hover {
   background-color: #6e6e6e;
   color:#ffffff;
 }                           
 .buttonEquals {
-  grid-column: span 2; /* Dette får knappen til å dekke 2 kolonner */
+  grid-column: span 2;
   background-color: #f0f0f0;
   border: none;
   border-radius: 10px;
   font-size: 1.5em;
   color: #333;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   transition: background-color 0.2s;
 }
 .buttonClear{
@@ -115,17 +120,8 @@ export default {
   border-radius: 10px;                                                 
   font-size: 1.5em;
   color: #333;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   transition: background-color 0.2s;
   
-}
-.ZeroButton{
- background-color: #f0f0f0;
- border: none;
- border-radius: 10px;
- font-size: 1.5em;
- color: #333;
- box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
- transition: background-color 0.2s;
 }
 </style>
