@@ -21,6 +21,7 @@
 
     <div class="buttonNumber" @click="appendToInput(1)">1</div>
     <div class="buttonNumber" @click="appendToInput(0)">0</div>
+    <div class="buttonOperation" @click="appendToInput('.')">.</div>
 
     <div class="buttonEquals" @click="calculate">=</div>
     <div class="buttonClear" @click="clearInput">C</div>
@@ -34,21 +35,46 @@ export default {
       currentInput: ''
     };
   },
+
+  mounted() {
+    document.addEventListener("keydown", this.handleKeyPress);
+  },
+  beforeUnmount() {
+    document.removeEventListener('keydown', this.handleKeyPress);
+  },
   methods: {
     appendToInput(value) {
       this.currentInput += value;
     },
-    
+
     calculate() {
+      if (/\/0(?!\d)/.test(this.currentInput)) {
+        this.currentInput = 'Can not divide by zero:(';
+        return;
+      }
       try {
         this.currentInput = eval(this.currentInput).toString();
       } catch (e) {
         this.currentInput = 'Error:(';
       }
     },
-
     clearInput() {
       this.currentInput = '';
+    },
+    handleKeyPress(e) {
+      // Sjekk hvilken tast som ble trykket og oppdater currentInput eller utfør handling
+      if (e.key >= '0' && e.key <= '9') {
+        this.appendToInput(e.key);
+      } else if (e.key === '+' || e.key === '-' || e.key === '*' || e.key === '/') {
+        this.appendToInput(e.key);
+      } else if (e.key === 'Enter') {
+        this.calculate();
+      } else if (e.key === 'Backspace') {
+        this.currentInput = this.currentInput.slice(0, -1);
+      } else if (e.key === 'Escape') {
+        this.clearInput();
+      }
+      // Legg til flere betingelser etter behov
     }
   }
 };
