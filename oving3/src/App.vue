@@ -1,5 +1,4 @@
 <script setup>
-import Display from "@/components/Calculator.vue";
 import Taskbar from "@/components/taskbar.vue";
 </script>
 
@@ -7,12 +6,13 @@ import Taskbar from "@/components/taskbar.vue";
   <header>
     <taskbar/>
   </header>
-  <main>
-    <Display/>
+  <main class="main">
+    <router-view/>
   </main>
 </template>
 
 <style scoped>
-
-
+.main{
+  margin-top: 155px ;
+}
 </style>

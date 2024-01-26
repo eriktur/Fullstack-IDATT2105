@@ -4,7 +4,7 @@
   max-width: 100%;
   font-weight: normal;
   text-align: center;
-  height: 2000px;
+  min-height: 100%;
 }
 
 

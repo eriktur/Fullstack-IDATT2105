@@ -18,8 +18,8 @@
     <div class="buttonOperation" @click="appendToInput('*')">*</div>
 
     <div></div>
-    <div></div>
-    <div></div>
+    <div class="buttonZero" @click="appendToInput(0)">0</div>
+
 
     <div class="buttonOperation" @click="appendToInput('/')">/</div>
     <div class="buttonClear" @click="clearInput">C</div>
@@ -153,6 +153,23 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   transition: background-color 0.2s;
 }
+.buttonZero{
+  grid-column: span 2;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 10px;
+  font-size: 30px;
+  color: #333;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.2s;
+
+}
+.buttonZero:hover  {
+  background-color: #6e6e6e;
+  color:#ffffff;
+}
+
+
 .buttonEquals:hover  {
   background-color: #6e6e6e;
   color:#ffffff;
@@ -173,16 +190,6 @@
 .log{
   color: #ffffff;
   grid-column:span 4;
-}
-.skibb{
-  grid-column: span 3;
-  background-color: #f0f0f0;
-  border: none;
-  border-radius: 10px;
-  font-size: 1.5em;
-  color: #333;
-  box-shadow: 0 4px 10px rgba(0, 0, 0,25);
-  transition: background-color 0.2s;
 }
 
 </style>
