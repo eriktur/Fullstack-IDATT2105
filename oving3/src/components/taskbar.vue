@@ -13,7 +13,7 @@
       <router-link to="/contactForm" class="Routlink"><Calculator>Contact</Calculator></router-link>
     </div>
     <div>
-      <router-link to="/Rewiev" class="Routlink">Review</router-link>
+      <router-link to="/Review" class="Routlink">Review</router-link>
     </div>
   </header>
 </template>

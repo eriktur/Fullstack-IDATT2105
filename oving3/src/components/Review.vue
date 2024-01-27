@@ -1,22 +1,22 @@
-<script setup>
-
-</script>
-
 <template>
-<div class="reviewsContainer">
-  <h3>hei</h3>
-
-</div>
+  <div>
+    <h2>Reviews</h2>
+    <div v-for="(feedback, index) in feedbacks" :key="index">
+      <p><strong>{{ feedback.name }}</strong>: {{ feedback.message }}</p>
+    </div>
+  </div>
 </template>
 
-<style scoped>
-.reviewsContainer{
-  border-color: red;
-  height: 500px;
-  width: 100%;
-  background-color: #f2f2f2;
-
-
-}
-
-</style>
+<script>
+export default {
+  data() {
+    return {
+      feedbacks: []
+    };
+  },
+  async mounted() {
+    const response = await fetch('http://localhost:3000/feedbacks');
+    this.feedbacks = await response.json();
+  }
+};
+</script>

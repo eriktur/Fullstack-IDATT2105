@@ -31,20 +31,21 @@ export default {
       }
     };
   },
+  
   methods: {
-    submitForm() {
-      // Her kan du legge til logikk for hva som skal skje når skjemaet sendes inn.
-      // For eksempel, sende data til en server eller vise en bekreftelsesmelding.
-      console.log('Skjema sendt med følgende data:', this.form);
+    async submitForm() {
+      await fetch('http://localhost:3000/feedbacks', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(this.form)
+      });
 
-      // Reset skjemaet etter innsending
-      this.form = {
-        name: '',
-        email: '',
-        message: ''
-      };
+      this.form = { name: '', email: '', message: '' }; // Reset skjemaet
     }
   }
+
 };
 </script>
 
@@ -88,7 +89,7 @@ export default {
 }
 .Send-button{
   padding: 10px 40px 10px 40px;
-  background-image: linear-gradient(45deg, #00e100 0%, #97fa97 67%, #00e100 100%);
+  background-image: linear-gradient(45deg, #00e100 0%, #ffb982 67%, #00e100 100%);
   border-radius: 10px;
   border: 0;
   transition: background-image 0.4s ease-in-out;
