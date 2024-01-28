@@ -2,7 +2,7 @@
   <header class="taskbar">
     <div class="navbarContentImg">
     <a class="navbar-logo">
-      <img src="/Users/erik/Desktop/NTNU/Fullstack/oving3/public/61d183263a856e0004c6334a.png" alt="Logo">
+      <img src="/61d183263a856e0004c6334a.png" alt="Logo">
     </a>
     </div>
 
