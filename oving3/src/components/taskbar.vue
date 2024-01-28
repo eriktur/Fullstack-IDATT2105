@@ -38,7 +38,7 @@
   height: 80px;
 
 }
-.navbarContent1, .navbarContent2, .navbarContent3, .navbarContent4 {
+.navbarContent1, .navbarContent3 {
   grid-column: auto; /* Bruker automatisk tildeling */
 }
 

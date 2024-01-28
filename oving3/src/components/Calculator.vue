@@ -2,31 +2,32 @@
   <div class="calculator">
     <div class="display">{{ currentInput || '0' }}</div>
 
-    <div class="buttonNumber" @click="appendToInput(9)">9</div>
-    <div class="buttonNumber" @click="appendToInput(8)">8</div>
+    <div class="buttonClear" @click="clearInput">C</div>
+    <div></div>
+    <div></div>
+    <div class="buttonOperation" @click="appendToInput('/')">/</div>
+
     <div class="buttonNumber" @click="appendToInput(7)">7</div>
-    <div class="buttonOperation" @click="appendToInput('+')">+</div>
-
-    <div class="buttonNumber" @click="appendToInput(6)">6</div>
-    <div class="buttonNumber" @click="appendToInput(5)">5</div>
-    <div class="buttonNumber" @click="appendToInput(4)">4</div>
-    <div class="buttonOperation" @click="appendToInput('-')">-</div>
-
-    <div class="buttonNumber" @click="appendToInput(3)">3</div>
-    <div class="buttonNumber" @click="appendToInput(2)">2</div>
-    <div class="buttonNumber" @click="appendToInput(1)">1</div>
+    <div class="buttonNumber" @click="appendToInput(8)">8</div>
+    <div class="buttonNumber" @click="appendToInput(9)">9</div>
     <div class="buttonOperation" @click="appendToInput('*')">*</div>
 
-    <div></div>
+
+    <div class="buttonNumber" @click="appendToInput(4)">4</div>
+    <div class="buttonNumber" @click="appendToInput(5)">5</div>
+    <div class="buttonNumber" @click="appendToInput(6)">6</div>
+    <div class="buttonOperation" @click="appendToInput('-')">-</div>
+
+    <div class="buttonNumber" @click="appendToInput(1)">1</div>
+    <div class="buttonNumber" @click="appendToInput(2)">2</div>
+    <div class="buttonNumber" @click="appendToInput(3)">3</div>
+    <div class="buttonOperation" @click="appendToInput('+')">+</div>
+
     <div class="buttonZero" @click="appendToInput(0)">0</div>
-
-
-    <div class="buttonOperation" @click="appendToInput('/')">/</div>
-    <div class="buttonClear" @click="clearInput">C</div>
-
-
-    <div class="buttonEquals" @click="calculate">=</div>
     <div class="buttonOperation" @click="appendToInput('.')">.</div>
+    <div class="buttonOperation" @click="calculate">=</div>
+
+
 
     <div class="log">
           <h3>Calculator log:</h3>
@@ -144,7 +145,7 @@
   background-color: #6e6e6e;
 }
 .buttonEquals {
-  grid-column: span 2;
+  grid-column: span 1;
   background-color: #f0f0f0;
   border: none;
   border-radius: 10px;
