@@ -3,16 +3,16 @@
     <h3 class="reveiwHeader">Submit Your Review</h3>
     <form @submit.prevent="submitForm">
       <div class="input">
-        <input class="container1" placeholder="Name.." type="text" id="name" v-model="form.name" required>
+        <input class="container1" placeholder="Name.." type="text" id="name" v-model="contact.name" required>
       </div>
 
       <div class="input">
-        <input class="container1" placeholder="E-mail.." type="email" id="email" v-model="form.email" required>
+        <input class="container1" placeholder="E-mail.." type="email" id="email" v-model="contact.email" required>
       </div>
 
       <div class="input">
 
-        <textarea class="message-container" placeholder="Review.." id="message" v-model="form.message" required></textarea>
+        <textarea class="message-container" placeholder="Review.." id="message" v-model="contact.message" required></textarea>
       </div>
 
       <button class="Send-button" type="submit">Send</button>
@@ -21,31 +21,58 @@
 </template>
 
 <script>
+import { ref, watch, computed } from 'vue';
+import { useStore } from 'vuex';
+
 export default {
-  data() {
-    return {
-      form: {
-        name: '',
-        email: '',
-        message: ''
+  name: 'ContactForm',
+  setup() {
+    // Using Vuex store for state management
+    const store = useStore();
+    // Contact form state with reactivity
+    const contact = ref({
+      name: store.state.contact.name,
+      email: store.state.contact.email,
+      message: ''
+    });
+
+    // Watches for changes in name and email to update the Vuex store
+    watch(() => contact.value.name, (newName) => {
+      store.commit('updateName', newName);
+    });
+    watch(() => contact.value.email, (newEmail) => {
+      store.commit('updateEmail', newEmail);
+    });
+
+    // Computed property to validate form fields
+    const isFormInvalid = computed(() => {
+      const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      const isEmailValid = emailRegex.test(contact.value.email);
+      return !contact.value.name || !isEmailValid || !contact.value.message;
+    });
+
+    // Function to handle form submission
+    const submitForm = async () => {
+      try {
+        const response = await fetch('http://localhost:3000/feedbacks', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(contact.value)
+        });
+
+        const data = await response.json();
+        if (data) {
+          alert('Success');
+          store.commit('updateContact', contact.value);
+        }
+      } catch (error) {
+        alert(error.message);
       }
     };
-  },
-  
-  methods: {
-    async submitForm() {
-      await fetch('http://localhost:3000/feedbacks', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(this.form)
-      });
-
-      this.form = { name: '', email: '', message: '' }; // Reset skjemaet
-    }
+    return { contact, isFormInvalid, submitForm };
   }
-
 };
 </script>
 
@@ -89,14 +116,14 @@ export default {
 }
 .Send-button{
   padding: 10px 40px 10px 40px;
-  background-image: linear-gradient(45deg, #00e100 0%, #ffb982 67%, #00e100 100%);
+  background-color: #97fa97;
   border-radius: 10px;
   border: 0;
   transition: background-image 0.4s ease-in-out;
 
 }
 .Send-button:hover{
-  background-image: linear-gradient(25deg, #00e100 0%, #97fa97 21%, #00e100 100%);
+  background-color: #00ff0d;
   transition: background-image 0.5s ease-in-out;
 }
 </style>

@@ -12,7 +12,6 @@
     <div class="buttonNumber" @click="appendToInput(9)">9</div>
     <div class="buttonOperation" @click="appendToInput('*')">*</div>
 
-
     <div class="buttonNumber" @click="appendToInput(4)">4</div>
     <div class="buttonNumber" @click="appendToInput(5)">5</div>
     <div class="buttonNumber" @click="appendToInput(6)">6</div>
@@ -24,7 +23,7 @@
     <div class="buttonOperation" @click="appendToInput('+')">+</div>
 
     <div class="buttonZero" @click="appendToInput(0)">0</div>
-    <div class="buttonOperation" @click="appendToInput('.')">.</div>
+    <div class="buttonNumber" @click="appendToInput('.')">.</div>
     <div class="buttonOperation" @click="calculate">=</div>
 
 
@@ -144,16 +143,6 @@
 .buttonOperation:hover {
   background-color: #6e6e6e;
 }
-.buttonEquals {
-  grid-column: span 1;
-  background-color: #f0f0f0;
-  border: none;
-  border-radius: 10px;
-  font-size: 30px;
-  color: #333;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  transition: background-color 0.2s;
-}
 .buttonZero{
   grid-column: span 2;
   background-color: #f0f0f0;
@@ -166,12 +155,6 @@
 
 }
 .buttonZero:hover  {
-  background-color: #6e6e6e;
-  color:#ffffff;
-}
-
-
-.buttonEquals:hover  {
   background-color: #6e6e6e;
   color:#ffffff;
 }

@@ -28,8 +28,6 @@ export default {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-gap: 25px 5px;
-
-
 }
 .Reviews{
   color: #ffffff;
@@ -44,5 +42,4 @@ export default {
 .feedback-text{
   font-size: 17px;
 }
-
 </style>
