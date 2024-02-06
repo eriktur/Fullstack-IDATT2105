@@ -15,7 +15,7 @@
         <textarea class="message-container" placeholder="Review.." id="message" v-model="contact.message" required></textarea>
       </div>
 
-      <button class="Send-button" type="submit">Send</button>
+      <button class="Send-button" type="submit" :disabled="isFormInvalid">Send</button>
     </form>
   </div>
 </template>
@@ -65,12 +65,20 @@ export default {
         const data = await response.json();
         if (data) {
           alert('Success');
-          store.commit('updateContact', contact.value);
+
+          // Oppdaterer Vuex store med de sendte verdiene
+          store.commit('updateContact', { name: contact.value.name, email: contact.value.email, message: contact.value.message });
+
+          // tømmer input ved innsending
+          contact.value.message = '';
+          contact.value.name = '';
+          contact.value.email = '';
         }
       } catch (error) {
         alert(error.message);
       }
     };
+
     return { contact, isFormInvalid, submitForm };
   }
 };
@@ -125,5 +133,10 @@ export default {
 .Send-button:hover{
   background-color: #00ff0d;
   transition: background-image 0.5s ease-in-out;
+}
+
+.Send-button:disabled {
+  background-color: #cccccc; /* Grå bakgrunn når deaktivert */
+  cursor: not-allowed; /* Endrer musepekeren for å indikere at knappen er deaktivert */
 }
 </style>

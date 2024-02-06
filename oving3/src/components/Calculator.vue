@@ -2,29 +2,29 @@
   <div class="calculator">
     <div class="display">{{ currentInput || '0' }}</div>
 
-    <div class="buttonClear" @click="clearInput">C</div>
+    <div class="buttonClear" data-test="clearData" @click="clearInput">C</div>
     <div></div>
     <div></div>
-    <div class="buttonOperation" @click="appendToInput('/')">/</div>
+    <div class="buttonOperation" data-test="operationDivide" @click="appendToInput('/')">/</div>
 
-    <div class="buttonNumber" @click="appendToInput(7)">7</div>
-    <div class="buttonNumber" @click="appendToInput(8)">8</div>
-    <div class="buttonNumber" @click="appendToInput(9)">9</div>
-    <div class="buttonOperation" @click="appendToInput('*')">*</div>
+    <div class="buttonNumber" data-test="number-7" @click="appendToInput(7)">7</div>
+    <div class="buttonNumber" data-test="number-8" @click="appendToInput(8)">8</div>
+    <div class="buttonNumber" data-test="number-9" @click="appendToInput(9)">9</div>
+    <div class="buttonOperation"  data-test="operationMultiply"@click="appendToInput('*')">*</div>
 
-    <div class="buttonNumber" @click="appendToInput(4)">4</div>
-    <div class="buttonNumber" @click="appendToInput(5)">5</div>
-    <div class="buttonNumber" @click="appendToInput(6)">6</div>
-    <div class="buttonOperation" @click="appendToInput('-')">-</div>
+    <div class="buttonNumber" data-test="number-4" @click="appendToInput(4)">4</div>
+    <div class="buttonNumber" data-test="number-5" @click="appendToInput(5)">5</div>
+    <div class="buttonNumber" data-test="number-6" @click="appendToInput(6)">6</div>
+    <div class="buttonOperation" data-test="operationSubtract" @click="appendToInput('-')">-</div>
 
-    <div class="buttonNumber" @click="appendToInput(1)">1</div>
-    <div class="buttonNumber" @click="appendToInput(2)">2</div>
-    <div class="buttonNumber" @click="appendToInput(3)">3</div>
-    <div class="buttonOperation" @click="appendToInput('+')">+</div>
+    <div class="buttonNumber" data-test="number-1" @click="appendToInput(1)">1</div>
+    <div class="buttonNumber" data-test="number-2" @click="appendToInput(2)">2</div>
+    <div class="buttonNumber" data-test="number-3"@click="appendToInput(3)">3</div>
+    <div class="buttonOperation" data-test="operationAdd" @click="appendToInput('+')">+</div>
 
-    <div class="buttonZero" @click="appendToInput(0)">0</div>
+    <div class="buttonZero" data-test="number-0" @click="appendToInput(0)">0</div>
     <div class="buttonNumber" @click="appendToInput('.')">.</div>
-    <div class="buttonOperation" @click="calculate">=</div>
+    <div class="buttonOperation" data-test="operationEqual" @click="calculate('=')">=</div>
 
 
 
