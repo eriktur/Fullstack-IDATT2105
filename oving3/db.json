@@ -41,6 +41,18 @@
       "name": "Sander",
       "email": "erikturmo@gmail.com",
       "message": "Du har vært veldig flink å lage kalkulator:)"
+    },
+    {
+      "id": "edda",
+      "name": "Jane Doe",
+      "email": "jane.doe@example.com",
+      "message": "Hello, this is a test message."
+    },
+    {
+      "id": "392a",
+      "name": "Test person",
+      "email": "test@person.com",
+      "message": "test"
     }
   ]
 }

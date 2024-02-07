@@ -15,7 +15,7 @@
         <textarea class="message-container" placeholder="Review.." id="message" v-model="contact.message" required></textarea>
       </div>
 
-      <button class="Send-button" type="submit" :disabled="isFormInvalid">Send</button>
+      <button class="Send-button" data-test="submit" type="submit" :disabled="isFormInvalid">Send</button>
     </form>
   </div>
 </template>
