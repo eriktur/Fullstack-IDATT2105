@@ -1,0 +1,94 @@
+2024-03-06 15:45:16,701 INFO [main] e.n.i.Idatt2105Application [StartupInfoLogger.java:50] Starting Idatt2105Application using Java 21.0.1 with PID 26706 (/Users/erik/Desktop/NTNU/Fullstack/sander/oving_4/target/classes started by erik in /Users/erik/Desktop/NTNU/Fullstack/sander/oving_4)
+2024-03-06 15:45:16,703 INFO [main] e.n.i.Idatt2105Application [SpringApplication.java:654] No active profile set, falling back to 1 default profile: "default"
+2024-03-06 15:45:17,445 INFO [main] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:109] Tomcat initialized with port 8081 (http)
+2024-03-06 15:45:17,472 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8081"]
+2024-03-06 15:45:17,483 INFO [main] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2024-03-06 15:45:17,503 INFO [main] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-03-06 15:45:17,568 INFO [main] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2024-03-06 15:45:17,568 INFO [main] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:296] Root WebApplicationContext: initialization completed in 832 ms
+2024-03-06 15:45:17,854 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8081"]
+2024-03-06 15:45:17,867 INFO [main] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:241] Tomcat started on port 8081 (http) with context path ''
+2024-03-06 15:45:17,874 INFO [main] e.n.i.Idatt2105Application [StartupInfoLogger.java:56] Started Idatt2105Application in 1.444 seconds (process running for 2.104)
+2024-03-06 15:45:30,406 INFO [http-nio-8081-exec-1] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-06 15:45:30,407 INFO [http-nio-8081-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:532] Initializing Servlet 'dispatcherServlet'
+2024-03-06 15:45:30,408 INFO [http-nio-8081-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:554] Completed initialization in 1 ms
+2024-03-06 15:45:30,503 INFO [http-nio-8081-exec-1] e.n.i.c.CalculationController [CalculationController.java:36] Received calculation request for expression: 4-5
+2024-03-06 15:45:30,511 INFO [http-nio-8081-exec-1] e.n.i.s.CalculationService [CalculationService.java:32] Calculation performed successfully. ID: a94bd56b-8ba3-442d-9f34-4fbfdf59e355, Expression: 4-5, Result: -1.0
+2024-03-06 15:45:30,511 INFO [http-nio-8081-exec-1] e.n.i.c.CalculationController [CalculationController.java:38] Calculation result: Calculate[id=a94bd56b-8ba3-442d-9f34-4fbfdf59e355, result=-1.0]
+2024-03-06 15:51:28,417 INFO [main] e.n.i.Idatt2105Application [StartupInfoLogger.java:50] Starting Idatt2105Application using Java 21.0.1 with PID 26843 (/Users/erik/Desktop/NTNU/Fullstack/oving4/backend/target/classes started by erik in /Users/erik/Desktop/NTNU/Fullstack/oving4/backend)
+2024-03-06 15:51:28,420 INFO [main] e.n.i.Idatt2105Application [SpringApplication.java:654] No active profile set, falling back to 1 default profile: "default"
+2024-03-06 15:51:29,259 INFO [main] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:109] Tomcat initialized with port 8081 (http)
+2024-03-06 15:51:29,270 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8081"]
+2024-03-06 15:51:29,272 INFO [main] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2024-03-06 15:51:29,272 INFO [main] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-03-06 15:51:29,316 INFO [main] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2024-03-06 15:51:29,316 INFO [main] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:296] Root WebApplicationContext: initialization completed in 864 ms
+2024-03-06 15:51:29,607 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8081"]
+2024-03-06 15:51:29,619 INFO [main] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:241] Tomcat started on port 8081 (http) with context path ''
+2024-03-06 15:51:29,626 INFO [main] e.n.i.Idatt2105Application [StartupInfoLogger.java:56] Started Idatt2105Application in 1.516 seconds (process running for 2.144)
+2024-03-06 15:51:48,601 INFO [http-nio-8081-exec-1] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-06 15:51:48,601 INFO [http-nio-8081-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:532] Initializing Servlet 'dispatcherServlet'
+2024-03-06 15:51:48,602 INFO [http-nio-8081-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:554] Completed initialization in 1 ms
+2024-03-06 15:51:48,711 INFO [http-nio-8081-exec-1] e.n.i.c.CalculationController [CalculationController.java:36] Received calculation request for expression: 5+5
+2024-03-06 15:51:48,723 INFO [http-nio-8081-exec-1] e.n.i.s.CalculationService [CalculationService.java:32] Calculation performed successfully. ID: 1579a045-b6b3-4514-b14f-a5db5365c378, Expression: 5+5, Result: 10.0
+2024-03-06 15:51:48,723 INFO [http-nio-8081-exec-1] e.n.i.c.CalculationController [CalculationController.java:38] Calculation result: Calculate[id=1579a045-b6b3-4514-b14f-a5db5365c378, result=10.0]
+2024-03-06 16:10:38,589 INFO [main] e.n.i.Idatt2105Application [StartupInfoLogger.java:50] Starting Idatt2105Application using Java 21.0.1 with PID 27135 (/Users/erik/Desktop/NTNU/Fullstack/oving4/backend/target/classes started by erik in /Users/erik/Desktop/NTNU/Fullstack/oving4/backend)
+2024-03-06 16:10:38,591 INFO [main] e.n.i.Idatt2105Application [SpringApplication.java:654] No active profile set, falling back to 1 default profile: "default"
+2024-03-06 16:10:39,344 INFO [main] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:109] Tomcat initialized with port 8081 (http)
+2024-03-06 16:10:39,356 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8081"]
+2024-03-06 16:10:39,358 INFO [main] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2024-03-06 16:10:39,358 INFO [main] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-03-06 16:10:39,407 INFO [main] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2024-03-06 16:10:39,407 INFO [main] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:296] Root WebApplicationContext: initialization completed in 784 ms
+2024-03-06 16:10:39,700 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8081"]
+2024-03-06 16:10:39,712 INFO [main] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:241] Tomcat started on port 8081 (http) with context path ''
+2024-03-06 16:10:39,718 INFO [main] e.n.i.Idatt2105Application [StartupInfoLogger.java:56] Started Idatt2105Application in 1.426 seconds (process running for 2.098)
+2024-03-06 16:10:43,033 INFO [http-nio-8081-exec-1] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-06 16:10:43,033 INFO [http-nio-8081-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:532] Initializing Servlet 'dispatcherServlet'
+2024-03-06 16:10:43,034 INFO [http-nio-8081-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:554] Completed initialization in 0 ms
+2024-03-06 16:10:43,134 INFO [http-nio-8081-exec-2] e.n.i.c.CalculationController [CalculationController.java:36] Received calculation request for expression: 5+5
+2024-03-06 16:10:43,144 INFO [http-nio-8081-exec-2] e.n.i.s.CalculationService [CalculationService.java:32] Calculation performed successfully. ID: 709e68e1-ced2-4da7-946c-1c6295ad6acf, Expression: 5+5, Result: 10.0
+2024-03-06 16:10:43,144 INFO [http-nio-8081-exec-2] e.n.i.c.CalculationController [CalculationController.java:38] Calculation result: Calculate[id=709e68e1-ced2-4da7-946c-1c6295ad6acf, result=10.0]
+2024-03-06 16:10:54,011 INFO [http-nio-8081-exec-3] e.n.i.c.CalculationController [CalculationController.java:36] Received calculation request for expression: 7+7
+2024-03-06 16:10:54,011 INFO [http-nio-8081-exec-3] e.n.i.s.CalculationService [CalculationService.java:32] Calculation performed successfully. ID: 828f7e47-5087-4a86-9490-85151d49726e, Expression: 7+7, Result: 14.0
+2024-03-06 16:10:54,011 INFO [http-nio-8081-exec-3] e.n.i.c.CalculationController [CalculationController.java:38] Calculation result: Calculate[id=828f7e47-5087-4a86-9490-85151d49726e, result=14.0]
+2024-03-07 12:28:58,490 INFO [main] e.n.i.Idatt2105Application [StartupInfoLogger.java:50] Starting Idatt2105Application using Java 21.0.1 with PID 31193 (/Users/erik/Desktop/NTNU/Fullstack/oving4/backend/target/classes started by erik in /Users/erik/Desktop/NTNU/Fullstack/oving4/backend)
+2024-03-07 12:28:58,494 INFO [main] e.n.i.Idatt2105Application [SpringApplication.java:654] No active profile set, falling back to 1 default profile: "default"
+2024-03-07 12:28:59,437 INFO [main] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:109] Tomcat initialized with port 8081 (http)
+2024-03-07 12:28:59,449 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8081"]
+2024-03-07 12:28:59,451 INFO [main] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2024-03-07 12:28:59,452 INFO [main] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-03-07 12:28:59,503 INFO [main] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2024-03-07 12:28:59,504 INFO [main] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:296] Root WebApplicationContext: initialization completed in 957 ms
+2024-03-07 12:28:59,986 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8081"]
+2024-03-07 12:29:00,000 INFO [main] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:241] Tomcat started on port 8081 (http) with context path ''
+2024-03-07 12:29:00,025 INFO [main] e.n.i.Idatt2105Application [StartupInfoLogger.java:56] Started Idatt2105Application in 1.971 seconds (process running for 2.752)
+2024-03-07 12:30:26,717 INFO [http-nio-8081-exec-1] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-07 12:30:26,718 INFO [http-nio-8081-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:532] Initializing Servlet 'dispatcherServlet'
+2024-03-07 12:30:26,719 INFO [http-nio-8081-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:554] Completed initialization in 1 ms
+2024-03-07 12:30:26,863 INFO [http-nio-8081-exec-2] e.n.i.c.CalculationController [CalculationController.java:36] Received calculation request for expression: 5+5
+2024-03-07 12:30:26,872 INFO [http-nio-8081-exec-2] e.n.i.s.CalculationService [CalculationService.java:32] Calculation performed successfully. ID: 1307953b-523e-47ca-9acd-6266daaec36b, Expression: 5+5, Result: 10.0
+2024-03-07 12:30:26,873 INFO [http-nio-8081-exec-2] e.n.i.c.CalculationController [CalculationController.java:38] Calculation result: Calculate[id=1307953b-523e-47ca-9acd-6266daaec36b, result=10.0]
+2024-03-07 12:30:42,551 INFO [http-nio-8081-exec-3] e.n.i.c.CalculationController [CalculationController.java:36] Received calculation request for expression: 18+6
+2024-03-07 12:30:42,566 INFO [http-nio-8081-exec-3] e.n.i.s.CalculationService [CalculationService.java:32] Calculation performed successfully. ID: 127be122-0c92-487b-ae15-fc2e5295d190, Expression: 18+6, Result: 24.0
+2024-03-07 12:30:42,566 INFO [http-nio-8081-exec-3] e.n.i.c.CalculationController [CalculationController.java:38] Calculation result: Calculate[id=127be122-0c92-487b-ae15-fc2e5295d190, result=24.0]
+2024-03-07 12:48:59,203 INFO [main] e.n.i.Idatt2105Application [StartupInfoLogger.java:50] Starting Idatt2105Application using Java 21.0.1 with PID 31452 (/Users/erik/Desktop/NTNU/Fullstack/oving4/backend/target/classes started by erik in /Users/erik/Desktop/NTNU/Fullstack/oving4/backend)
+2024-03-07 12:48:59,206 INFO [main] e.n.i.Idatt2105Application [SpringApplication.java:654] No active profile set, falling back to 1 default profile: "default"
+2024-03-07 12:49:00,077 INFO [main] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:109] Tomcat initialized with port 8081 (http)
+2024-03-07 12:49:00,088 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8081"]
+2024-03-07 12:49:00,090 INFO [main] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2024-03-07 12:49:00,090 INFO [main] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-03-07 12:49:00,136 INFO [main] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2024-03-07 12:49:00,137 INFO [main] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:296] Root WebApplicationContext: initialization completed in 861 ms
+2024-03-07 12:49:00,439 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8081"]
+2024-03-07 12:49:00,451 INFO [main] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:241] Tomcat started on port 8081 (http) with context path ''
+2024-03-07 12:49:00,457 INFO [main] e.n.i.Idatt2105Application [StartupInfoLogger.java:56] Started Idatt2105Application in 1.615 seconds (process running for 2.604)
+2024-03-07 12:49:49,124 INFO [http-nio-8081-exec-1] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-07 12:49:49,124 INFO [http-nio-8081-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:532] Initializing Servlet 'dispatcherServlet'
+2024-03-07 12:49:49,125 INFO [http-nio-8081-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:554] Completed initialization in 1 ms
+2024-03-07 12:49:49,238 INFO [http-nio-8081-exec-1] e.n.i.c.CalculationController [CalculationController.java:36] Received calculation request for expression: 5+5
+2024-03-07 12:49:49,245 INFO [http-nio-8081-exec-1] e.n.i.s.CalculationService [CalculationService.java:32] Calculation performed successfully. ID: 887be79d-a086-468e-95d9-7027ea3fec4c, Expression: 5+5, Result: 10.0
+2024-03-07 12:49:49,245 INFO [http-nio-8081-exec-1] e.n.i.c.CalculationController [CalculationController.java:38] Calculation result: Calculate[id=887be79d-a086-468e-95d9-7027ea3fec4c, result=10.0]
+2024-03-07 12:50:00,698 INFO [http-nio-8081-exec-2] e.n.i.c.CalculationController [CalculationController.java:36] Received calculation request for expression: 15+6
+2024-03-07 12:50:00,699 INFO [http-nio-8081-exec-2] e.n.i.s.CalculationService [CalculationService.java:32] Calculation performed successfully. ID: 96128876-5191-4acf-9f60-0a71cc024c50, Expression: 15+6, Result: 21.0
+2024-03-07 12:50:00,700 INFO [http-nio-8081-exec-2] e.n.i.c.CalculationController [CalculationController.java:38] Calculation result: Calculate[id=96128876-5191-4acf-9f60-0a71cc024c50, result=21.0]
