@@ -7,13 +7,16 @@
     </div>
 
     <div class="navbarContent1">
-      <router-link to="/" class="Routlink">Calculator</router-link>
+      <router-link to="Calculator" class="Routlink">Calculator</router-link>
     </div>
-    <div class="navbarContent3">
+    <div class="navbarContent2">
       <router-link to="/contactForm" class="Routlink"><Calculator>Contact</Calculator></router-link>
     </div>
-    <div>
+    <div class="navbarContent3">
       <router-link to="/Review" class="Routlink">Review</router-link>
+    </div>
+    <div class="navbarContent4">
+      <router-link to="/" class="logout">log out</router-link>
     </div>
   </header>
 </template>
@@ -38,8 +41,11 @@
   height: 80px;
 
 }
-.navbarContent1, .navbarContent3 {
+.navbarContent1, .navbarContent2, .navbarContent3 {
   grid-column: auto; /* Bruker automatisk tildeling */
+}
+.navbarContent4 {
+  grid-column: 8; /* Bruker automatisk tildeling */
 }
 
 .navbarContentImg{
@@ -60,12 +66,13 @@
   color: #ffffff;
   text-decoration: none;
 }
-.Routlink:hover{
-  
-  
-
-  
+.logout{
+    color: #ffffff;
+    text-decoration: none;
+    text-align: right;
 }
+
+
 
 
 

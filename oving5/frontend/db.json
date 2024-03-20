@@ -41,6 +41,12 @@
       "name": "Sander",
       "email": "erikturmo@gmail.com",
       "message": "Du har vært veldig flink å lage kalkulator:)"
+    },
+    {
+      "id": "d22e",
+      "name": "Svein",
+      "email": "titi@gmail.com",
+      "message": "Nå begynner denne kalkulatoren å bli litt utdatert\n"
     }
   ]
 }
